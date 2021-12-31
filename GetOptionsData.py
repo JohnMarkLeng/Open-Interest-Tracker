@@ -1,7 +1,12 @@
 import requests 
 import json
+import os
 
-key = 'OWBDRKYAEFZN2AW5DJ6SBCIOIODQBQSZ'
+from dotenv import load_dotenv
+
+load_dotenv()  #created environment variables
+
+key = os.getenv("API_KEY")
 
 
 def get_options(**kwargs):

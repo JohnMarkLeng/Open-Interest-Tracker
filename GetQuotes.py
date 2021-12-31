@@ -1,8 +1,12 @@
 import requests
 import json
+import os
 
+from dotenv import load_dotenv
 
-key = 'OWBDRKYAEFZN2AW5DJ6SBCIOIODQBQSZ'
+load_dotenv()  #created environment variables
+
+key = os.getenv("API_KEY")
 
 def jprint(obj):
     # create a formatted string of the Python JSON object

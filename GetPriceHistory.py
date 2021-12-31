@@ -1,14 +1,17 @@
 import requests 
 import json
+import os
 
+from dotenv import load_dotenv
+
+load_dotenv()  #created environment variables
+
+key = os.getenv("API_KEY")
 
 def jprint(obj):
     # create a formatted string of the Python JSON object
     text = json.dumps(obj, sort_keys=True, indent=4)
     print(text)
-
-
-key = 'OWBDRKYAEFZN2AW5DJ6SBCIOIODQBQSZ'
 
 
 def get_price_history(**kwargs): 
